@@ -1,0 +1,50 @@
+{
+  "source": "./apps",
+  "destination": "./www",
+  "plugins": [
+    {
+      "name": "esdoc-standard-plugin",
+      "option": {
+        "lint": {
+          "enable": false
+        },
+        "coverage": {
+          "enable": false
+        },
+        "brand": {
+          "logo": "./docs/asset/logo.png",
+          "title": "Exposomics",
+          "description": "Discover things you are exposed to",
+          "repository": "https://github.com/doc-ai/exposomics",
+          "site": "https://doc-ai.github.io/exposomics",
+          "image": "./docs/asset/logo.png"
+        },
+        "manual": {
+          "index": "./docs/home.md",
+          "globalIndex": true,
+          "asset": "./docs/asset",
+          "files": [
+            "./docs/home.md",
+            "./docs/details.md",
+            "./docs/example.md"
+          ]
+        }
+      }
+    },
+    {
+      "name": "esdoc-jsx-plugin",
+      "option": {
+        "enable": true
+      }
+    },
+    {
+      "name": "esdoc-react-plugin"
+    },
+    {
+      "name": "esdoc-ecmascript-proposal-plugin",
+      "option": {
+        "all": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+$font-stack: Helvetica, Arial, sans-serif;
+
+$color-white: #fff;
+$color-black: #000;
+
+$gradient-example: linear-gradient(45deg, $color-white 0%, $color-black 100%);
+
+$breakpoints: (
+  'xs-phone': 375px,
+  'phone': 480px,
+  'tablet': 768px,
+  'desktop': 992px,
+  'widescreen': 1200px,
+  'large': 1300px
+);
