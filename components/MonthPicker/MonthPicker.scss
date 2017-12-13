@@ -1,0 +1,26 @@
+.MonthPicker {
+  display: inline-block;
+  position: relative;
+
+  .button {
+    // width: 400px;
+    // height: 250px;
+    background: #ffffff;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0);
+
+    //     background: #fff;
+    // border: 1px solid #000;
+    // color: #000;
+    // height: 40px;
+    line-height: 40px;
+    // text-align: center;
+    &:hover {
+      background-color: #fbfbfb;
+    }
+  }
+
+  .calendarContainer {
+    position: absolute;
+    z-index: 1;
+  }
+}

@@ -1,0 +1,21 @@
+.Calendar {
+  width: 300px;
+
+  .button {
+    background: #fff;
+    border: 1px solid #000;
+    color: #000;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+
+    &.selected {
+      background: #000;
+      color: #fff;
+    }
+  }
+
+  button.button:hover {
+    background: #ccc;
+  }
+}

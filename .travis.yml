@@ -1,0 +1,25 @@
+sudo: required
+
+services:
+  - docker
+
+language: node_js
+
+node_js:
+  - '8.9'
+
+env:
+  global:
+    - secure: MqMU7l1lh5YVaEklCN4QpK4YUCv9LxOsiMvUSOW43ZADASOjorpXA90TOmg/U0JjPG8OyyTkc/ODkoJq6B27NeK3+4GeRIINwiEeIJlYcdNu3fbYLQzSuo/vLes+t0q7ggiG9bGwohkGrljUyf3niAQiuQlKXScCo0yIcE4a7JggMts4x44eyLraN5izfyIBi15+XJYaHrAGwmqPdTln5t2MGMxfcy8yCkHO8R9vrnTCJVqGK2IJwjhbovXZGHIQ0SeKSRKM8xwEorubBNexLJdX/M3+9NJ8iMOuNxYkI+r2wvmWpsAUGzs+5inTB4oR/R4NbuNzyRPISUfK+nBHlwyLdkCoaFXYYjn5N9TPO5KigfI/BWZ+g36ax9j9FE14L5S6exAhJmLJdDBcCfptf3DTojG7MEJhYbSYLUtinSXM5Mbjs+1zBDTOaMkdjnHFoWgI/z2c5MY/LD6hnSxSIkKiW3pMppPzstdKfBmpr5lYcu5cN9L+fIOK34QV5V/ywuHZeFgGwuU67O1ojSwidw8/ctN8lnfhwg9BWWrOYOHE+0Rxou06o7So+LuFG0XRAUB6qfIh6oJ1+ArD96Yk4WtxwlAo6nZ2YrKMXBHjvnrNZdHKCyQ1Sp+7hILCQHMRJt3WhEo4hV2zalLcnobnbv8KA8mJfHbRURiULdKxasA=
+    - secure: VpEoTSgJNI/try81g9ATgktdV6dGaIGgfmOoytYWukSZGNzscpy1ttvj064HYSKiWLhkfiSC0m0K2DBGlL1HN4peFqhdd2oXwSTrLFc2eTWlmmO3Gm6eobD+UXjCthtqIcGcVa7hYDQYJXYMYKOOdjQ0Sgg+KxGK9FuOPDterC/maQkVZMfC8IB4TN+CQuYoxApCwvPRZzNzZgwzZ5pc5XTsMRtLK3qRSF/wqOmuVPH6sbylHiP7M/C340rsNie4rS+9qwVz6o8GqbiyZ89XBxd6SUAV7U7lC2A4DI7k0faoECx23kqRpmLixbyhc//96Y4zeSBu89X6+wllaCbZH2iLH+3mLaXa+fsGR9W8y4l5kCDSQ4enWw5a2nWSSFfhO47DTNBXCbz8i2ORmjaDxLjYjHAyb91gojbAweUqedo2cf1iqtRHOPDDLJu9M80MjgDFJeC+fwOo/Qloti/qKOCbQmZjV0IiUomdqEjrU4uUaSH8Bh4VnLqDTQAB2Hsx1E45J2gdVHO9WDAzEhMYweBBdlPsEJ4b+1EaGYHXgA0VpQ3MfDKHHSuyeqhmTnKptMLXge9Z5dmzvgfVwexSdEmDUl2/+GWSUEpcrmrC5ziSvd7t/0MpxPVKJJ0cYPHDqtKodRJx5Okt6psNvO75Wogk+e7nW0ouRtDQaEbAuDg=
+    - secure: UDs+EY93QDGu8xLMhDPcBy1Mj9l3DQWp8qy/sd69ft6hlu8/pYnxSovFJEh8ev96Pskmh2Y8y5nKAITxkXG0vZmb89Mln+P8ooDPL9GZSDW8VZx6egSPMqFjlxBpPHK5vWun8mk65bC+MN8TjECLnz0Olh5fZDn7QG5+2yFMIFyFmPUVj/WRT34KSPl644kyrJMW2X4iAK/fHj5DhoaC89GxExNBugk60PdO7zSjOo2MiQs6daLHphNhLfjqNf8zhRXsJKRGg8avxJaICP9/5L6vWkeZ63nWB3CqxuImiH9blqt/M/WsfqjY0OSaQEM12yj1z2kcOMinZmJEjOdmeNUfc0O0osn3V1O6b69pciZwVZrfpmSE6Jd0RfKZd0z67GuQg7/l3Q1zoYreliPxS5YteuCJKYsrlqV7VrIMUaqiA81iUWnlOlsYjSnz3FfrpAfavcc82ho9tCyKoPCXVE34K+8tr3JUMGz4GMo2KK/4olxn7CuNF5I1OEYC7fEIM69b6YGb90hAiaa5tN43Q+mzrTvzMNzZhA47GlC676uRm78iyd1LIFS+gnzKuQD/7FCpbN3BKbfuzXvX0VaL8Ba77XOni6vy8YrhBhA5/XAUTylU1tMloA6rrXdI0ji8pim7IIWKqDQHr5wTCERPPGPw9N5pUL8ihlJmIMYzj4Y=
+    - COMMIT=${TRAVIS_COMMIT::8}
+    - REPO="docai/exposomics"
+
+after_success:
+  - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
+  - export TAG=`if [ "$TRAVIS_BRANCH" == "master" ]; then echo "latest"; else echo $TRAVIS_BRANCH ; fi`
+  - docker build -f Dockerfile -t $REPO:$COMMIT .
+  - docker tag $REPO:$COMMIT $REPO:$TAG
+  - docker tag $REPO:$COMMIT $REPO:travis-$TRAVIS_BUILD_NUMBER
+  - docker push $REPO
