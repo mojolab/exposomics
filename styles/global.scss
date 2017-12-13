@@ -1,0 +1,71 @@
+@import '~normalize.scss/normalize';
+@import '~flexboxgrid-sass/flexboxgrid';
+@import 'font-awesome/font-awesome';
+@import 'base';
+@import 'typography';
+@import 'placesAutocomplete';
+@import 'heatmap';
+@import 'react-tabs';
+
+$color-bg: $color-white;
+
+* {
+  appearance: none;
+  box-sizing: border-box;
+  font-family: $font-stack;
+  -webkit-overflow-scrolling: touch;
+  text-size-adjust: 100%;
+}
+
+body {
+  background-color: $color-bg;
+  font-family: $font-stack;
+  font-size: 22px;
+  height: 100%;
+  line-height: 20px;
+  min-width: 320px;
+}
+
+html,
+body,
+body > div:first-child,
+div[data-reactroot] {
+  height: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+.centered-text {
+  text-align: center;
+}
+
+.container {
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  @include media('>=tablet') {
+    width: 750px;
+  }
+
+  @include media('>=desktop') {
+    width: 1100px;
+  }
+
+  @include media('>=widescreen') {
+    max-width: 1440px;
+    width: auto;
+  }
+
+  &::before,
+  &::after {
+    content: ' ';
+    display: table;
+  }
+
+  &::after {
+    clear: both;
+  }
+}

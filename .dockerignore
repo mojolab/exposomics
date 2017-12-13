@@ -1,0 +1,5 @@
+.git
+.next
+*.log
+node_modules
+apps/airQuality/server/data
