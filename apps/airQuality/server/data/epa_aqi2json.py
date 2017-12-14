@@ -8,10 +8,24 @@ https://drive.google.com/a/doc.ai/file/d/1FQUTpz6Rsy-NHbG6sOJGc7KYpBX3bpnT/view?
 
 import json
 import pandas as pd
+import zipfile
+# from zipfile import Zipfile
 
+import wget
+
+# Download raw zipped data and extract it into the ./raw directory
+data_url = "https://s3-us-west-1.amazonaws.com/ai.doc.exposomics/airQuality.zip"
+destination = "./raw/raw.zip"
+wget.download(data_url, destination)
+
+with zipfile.ZipFile(destination, "r") as z:
+    z.extractall("./raw")
+
+# Prep pathnames
 epa_aqi_datafile_name_template = "./raw/daily_aqi_by_county_{}.csv"
 output_json_file = "./json/data.json"
 
+# Prep year ranges
 years = [year for year in range(1980, 2017)]  # Does not include 2017
 county2date2aqi_info = {}
 
@@ -32,8 +46,9 @@ for year in years:
     # Assuming these preserve order
     state_counties = set([(state, county) for state, county in zip(states, counties)])
     # state_counties = zip(states, counties)
-    print(year, "\n*****************\n")
-    print(state_counties)
+    print(year)
+    # print(year, "\n*****************\n")
+    # print(state_counties)
     # print(counties)
     
     # print(counties)

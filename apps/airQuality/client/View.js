@@ -1,6 +1,12 @@
 import React from 'react';
 import { shape, arrayOf, any, string } from 'prop-types';
+import cx from 'classnames';
 import CalendarHeatmap from './components/Heatmap';
+import Style from '../../../components/Style';
+import {
+  classNames as cs,
+  stylesheet,
+} from '../../../components/ResultsPage/ResultsPage.scss';
 
 const Tooltip = entry => (
   <div
@@ -53,6 +59,8 @@ export default class View extends React.PureComponent {
     // console.log(dataList);
     return (
       <div>
+        <Style stylesheet={stylesheet} />
+
         <CalendarHeatmap
           startDate={startDate}
           endDate={endDate}
@@ -61,6 +69,95 @@ export default class View extends React.PureComponent {
           mapValueToColor={mapValueToColor}
           renderTooltip={Tooltip}
         />
+
+        <div className="row">
+          <div className="col-xs-6">
+            <ul className={cs.legend}>
+              <div className="row">
+                <li>
+                  <div className={cx('col-xs-1', cs.zero)}>
+                    <span />
+                    <br />
+                    <p>Good</p>
+                  </div>
+                </li>
+                <li>
+                  <div className={cx('col-xs-1', cs.one)}>
+                    <span />
+                    <br />
+                    <p>Moderate</p>
+                  </div>
+                </li>
+                <li>
+                  <div className={cx('col-xs-1', cs.two)}>
+                    <span />
+                    <br />
+                    <p>
+                      {' '}
+                      Unhealthy <br />for <br />sensitive <br />groups
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <div className={cx('col-xs-1', cs.three)}>
+                    <span />
+                    <br />
+
+                    <p> Unhealthy</p>
+                  </div>
+                </li>
+                <li>
+                  <div className={cx('col-xs-1', cs.four)}>
+                    <span />
+                    <br />
+
+                    <p>
+                      {' '}
+                      Very <br />unhealthy
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <div className={cx('col-xs-1', cs.five)}>
+                    <span />
+                    <br />
+
+                    <p> Hazardous</p>
+                  </div>
+                </li>
+              </div>
+            </ul>
+          </div>
+          <div className={cx('col-xs-6', cs.moreInfoContent)}>
+            <div className="row">
+              <p className={cs.footerTitle}>
+                If you want to know more about the Air Quality Index and how
+                <br />it affects your health check out the following links:
+              </p>
+            </div>
+            <ul className={cs.moreInfo}>
+              <div className="row">
+                <div className="col-xs-6">
+                  <li>
+                    <a href="/">EPA&apos;s Air Quality Brochure</a>
+                    <br />
+                    <span>
+                      A comprehensive guide to everything AQI (20 min read)
+                    </span>
+                  </li>
+                </div>
+
+                <div className="col-xs-6">
+                  <li>
+                    <a href="/">How AQI is Calculated</a>
+                    <br />
+                    <span>5 min read</span>
+                  </li>
+                </div>
+              </div>
+            </ul>
+          </div>
+        </div>
       </div>
     );
   }
