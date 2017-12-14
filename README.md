@@ -14,7 +14,7 @@ For more information on the contest, [check out our website](doc-ai.github.io/ex
 The challenge is hosted on doc.ai Exposomic repository. The goal of this challenge is to design a microapp and write extensions to the doc.ai exposomic module. The best extensions will be integrated into doc ai solution that performs DL computations on all other quantified biology to improve health and accelerate scientific research.
 
 
-**Local Installation:**
+**[Local Installation:](#local-installation)**
 - Install Homebrew: `brew install`
 - Install Node.js via homebrew : `brew install node`
 - Install dependencies via yarn: `yarn install`
