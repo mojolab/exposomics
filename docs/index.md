@@ -6,7 +6,7 @@ Before birth, our exposures to various environmental stressors begins. Expos-omi
 
 How do people connect to and describe quantitatively what we have been exposed to? Unfortunately, exposomics data, like other sources of data, have never been aggregated or studied in conjunction with other health data points. That’s why doc.ai, an AI-powered healthcare startup based in Silicon Valley , has created this open-source Exposomics challenge. We believe a collaboration between data scientists and developer communities is the best way to extract health insights from the richest exposomic datasets around us!
 
-### [LIVE DEMO](https://doc-ai.github.io/exposomics)
+### [LIVE DEMO](https://exposomics.doc.ai)
 
 ### THE EXPOSOMIC CHALLENGE
 [More info here](https://doc-ai.github.io/exposomics/manual/details.html)
