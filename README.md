@@ -1,5 +1,6 @@
 # **“CAN YOU PREDICT HEALTH FROM WHAT YOU HAVE BEEN EXPOSED TO?”**
 
+[![Build Status](https://travis-ci.org/doc-ai/exposomics.svg?branch=master)](https://travis-ci.org/doc-ai/exposomics)
 [![Greenkeeper badge](https://badges.greenkeeper.io/doc-ai/exposomics.svg)](https://greenkeeper.io/)
 
 Before birth, our exposures to various environmental stressors begins. Expos-omic measures all the exposures of an individual in a  lifetime and how those exposures relate to health. Using “omic” techniques the collected exposure data can be linked to biochemical and molecular changes in our body. By understanding the impact of these exposomes, for the first time we are able to create a holistic profile of each individual’s health and risk for diseases.
