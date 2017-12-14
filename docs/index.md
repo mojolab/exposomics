@@ -6,8 +6,10 @@ Before birth, our exposures to various environmental stressors begins. Expos-omi
 
 How do people connect to and describe quantitatively what we have been exposed to? Unfortunately, exposomics data, like other sources of data, have never been aggregated or studied in conjunction with other health data points. That’s why doc.ai, an AI-powered healthcare startup based in Silicon Valley , has created this open-source Exposomics challenge. We believe a collaboration between data scientists and developer communities is the best way to extract health insights from the richest exposomic datasets around us!
 
+### [LIVE DEMO](https://exposomics.doc.ai)
+
 ### THE EXPOSOMIC CHALLENGE
-([…for more info](https://doc-ai.github.io/exposomics/manual/details.html))
+[More info here](https://doc-ai.github.io/exposomics/manual/details.html)
 
 The challenge is hosted on doc.ai Exposomic repository. The goal of this challenge is to design a microapp and write extensions to the doc.ai exposomic module. The best extensions will be integrated into doc ai solution that performs DL computations on all other quantified biology to improve health and accelerate scientific research.
 
@@ -15,16 +17,16 @@ The challenge is hosted on doc.ai Exposomic repository. The goal of this challen
 
 ## PRIZES (sponsored by doc.ai)
 
-*  ### 1st  Prize – 20,000$NRN ($2,000 market value, 2017 Oct)
-*  ### 2nd Prize – 10,000$NRN ($1,000 market value, 2017 Oct)
-*  ### 3rd Prize – 5,000$NRN ($500 market value, 2017 Oct)
+*  ### 1st  Prize – 20,000$NRN ($2,000 value based on Oct-17 tokensale price) 
+*  ### 2nd Prize – 10,000$NRN ($1,000 value based on Oct-17 tokensale price)
+*  ### 3rd Prize – 5,000$NRN ($500 value based on Oct-17 tokensale price)
 
-*  ### Best Visualization Prize – 10,000$NRN ($1,000 market value, 2017 Oct)
-*  ### Best Dataset Prize – 10,000$NRN ($1,000 market value, 2017 Oct)
-*  ### Best International Prize – 10,000$NRN ($1,000 market value, 2017 Oct)
+*  ### Best Visualization Prize – 10,000$NRN ($1,000 value based on Oct-17 tokensale price)
+*  ### Best Dataset Prize – 10,000$NRN ($1,000 value based on Oct-17 tokensale price)
+*  ### Best International Prize – 10,000$NRN ($1,000 value based on Oct-17 tokensale price)
 
 *  ### **Invite your friends to the challenge for extra 200 $NRN referral bonus!
- ** referral bonus, up to 20,000$NRN, applies upon a valid submission
+ ** up to 20,000 $NRN total referral bonus, consisting of 200$NRN per each new network participant referred
 
  ## [Join the challenge!](https://github.com/doc-ai/exposomics)
 

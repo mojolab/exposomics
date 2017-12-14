@@ -1,11 +1,12 @@
 # Contest Details
 
 ## How to participate
-* Create and submit a new issue, following the template we've provided. This includes listing all names, github accounts, and emails of everyone contributing to your project, and a brief (~1-2 paragraph) description of your proposed work.
-* Fork the [repository](https://github.com/doc-ai/exposomics) and create your branch from `master`.
-* Complete [local installation instructions](https://github.com/doc-ai/exposomics/blob/master/README.md#local-installation).
-* Submit a pull request with a reference to your issue number (#IssueNumber), so your PR links directly to your issue submission.
-* Upon a successful testing and code review, we will merge your branch into `master` and evaulate your entry for contest awards.
+1. Complete our [registration form](https://goo.gl/forms/hZX1r5CIHJC76vBA3). 
+2. Create and submit a new issue, following the template we've provided. This includes listing all names, github accounts, and emails of everyone contributing to your project, and a brief (~1-2 paragraph) description of your proposed work.
+3. Fork the [repository](https://github.com/doc-ai/exposomics) and create your branch from `master`.
+4. Complete [local installation instructions](https://github.com/doc-ai/exposomics/blob/master/README.md#local-installation).
+5. Submit a pull request with a reference to your issue number (#IssueNumber), so your PR links directly to your issue submission.
+6. Upon a successful testing and code review, we will merge your branch into `master` and evaulate your entry for contest awards.
 
 ## Sample ideas for the Exposomic module
 * For this challenge, you will write extensions to the doc.ai Exposomics module. An example file is provided in the doc.ai repository. Some ideas include:

@@ -35,16 +35,24 @@ export default class IndexPage extends React.PureComponent {
           <div className="row center-xs">
             <div className="col-xs-11">
               <p className={cs.subtitle}>
-                Our environment impacts our health! doc.ai&apos;s Exposomics
-                project is part of our Neuron platform,
-                <br /> helping individuals gain health insights from all their
-                omics.
+                <i>Our environment impacts our health! </i>
                 <br />
-                Enter the cities you lived in with corresponding dates to see
-                your daily Air Quality Index for each of these dates. You can
-                enter places of residence dating back to 1980.
+                doc.ai&apos;s Exposomics project is part of our Neuron platform,
+                helping individuals gain health insights <br />from all their
+                omics. Enter the cities you lived in with corresponding dates to
+                see your daily <br />Air Quality Index for each of these dates.
+                You can enter places of residence dating back to 1980.
                 <br />
-                Currently supports only US
+                <a
+                  className={cs.joinChallenge}
+                  href="https://doc-ai.github.io/exposomics/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Join the Exposomics Challenge!
+                </a>
+                <br />
+                <b> Currently supports only US</b>
                 {/* Submit your zipcode to
               <br />
               Things you are exposed to

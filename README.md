@@ -20,9 +20,9 @@ The challenge is hosted on doc.ai Exposomic repository. The goal of this challen
 - Install dependencies via yarn: `yarn install`
 - Install MongoDB: [Use this guide](https://docs.mongodb.com/getting-started/shell/installation/) to set up MongoDB on your machine and run a local database server.
 - Install Git Large File Storage via homebrew: `brew install git-lfs`
-- Import json data into local repo: `git lfs pull`
+- Download the raw data and prepare for import: `python apps/airQuality/server/data/prepare_data.py`
 - Import data into your local database service: `node apps/airQuality/server/data/import_data.js`
-- If you will add your own data source (instead of using our Air Quality data), we have example scripts used for our database at `apps/airQuality/server/data/prepare_data.py`
+<!-- - If you will add your own data source (instead of using our Air Quality data), we have example scripts used for our database at `apps/airQuality/server/data/prepare_data.py` -->
 
 **Modifications**
 - Note: for new developers that only want to make basic modifications, all your changes will probably be made to the `apps/airQuality/server/Controller.js` file. That file has the logic that actually queries the database and constructs a dataset to be rendered.

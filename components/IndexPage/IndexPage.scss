@@ -22,7 +22,7 @@
 
 .subtitle {
   opacity: 0.8;
-  font-size: 22px;
+  font-size: 16px;
   color: #555555;
   letter-spacing: 0;
   line-height: 36px;
@@ -52,4 +52,10 @@ button:disabled {
   opacity: 0.35;
   cursor: not-allowed;
   background: #555555;
+}
+
+.joinChallenge {
+  font-size: 24px;
+  font-weight: bold;
+  color: #26bd14;
 }
