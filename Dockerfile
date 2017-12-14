@@ -1,4 +1,4 @@
-FROM node:8
+FROM node:8-onbuild
 
 ARG googleMapsApiKey
 ENV googleMapsApiKey=$googleMapsApiKey
