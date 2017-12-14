@@ -3,7 +3,7 @@
 ## How to participate
 * Create and submit a new issue, following the template we've provided. This includes listing all names, github accounts, and emails of everyone contributing to your project, and a brief (~1-2 paragraph) description of your proposed work.
 * Fork the [repository](https://github.com/doc-ai/exposomics) and create your branch from `master`.
-* Complete local installation instructions.
+* Complete [local installation instructions](https://github.com/doc-ai/exposomics/blob/master/README.md#local-installation).
 * Submit a pull request with a reference to your issue number (#IssueNumber), so your PR links directly to your issue submission.
 * Upon a successful testing and code review, we will merge your branch into `master` and evaulate your entry for contest awards.
 
