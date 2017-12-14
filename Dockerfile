@@ -1,4 +1,4 @@
-FROM 828894711537.dkr.ecr.us-west-1.amazonaws.com/node:onbuild
+FROM node:8
 
 ARG googleMapsApiKey
 ENV googleMapsApiKey=$googleMapsApiKey
