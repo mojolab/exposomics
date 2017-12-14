@@ -16,6 +16,12 @@ env:
     - COMMIT=${TRAVIS_COMMIT::8}
     - REPO="docai/exposomics"
 
+before_install:
+  - npm install -g greenkeeper-lockfile@1
+
+before_script: greenkeeper-lockfile-update
+after_script: greenkeeper-lockfile-upload
+
 after_success:
   - docker login -u $DOCKER_USER -p $DOCKER_PASS
   - export TAG=`if [ "$TRAVIS_BRANCH" == "master" ]; then echo "latest"; else echo $TRAVIS_BRANCH
