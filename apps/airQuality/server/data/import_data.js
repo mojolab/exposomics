@@ -5,13 +5,13 @@ import JSONStream from 'JSONStream';
 import es from 'event-stream';
 // const ProgressBar = require('progress');
 import MongooseManager from '../../../../utils/MongooseManager';
-import Model from '../models/AQI';
+import AirQualityRecord from '../models/AirQualityRecord';
 
 // const data = require('./data.json');
 
 async function importData() {
   await MongooseManager.connect();
-  await Model.remove();
+  await AirQualityRecord.remove();
 
   // const bar = new ProgressBar(
   //   `      > [:bar] :percent      :current / :total      ETA :etas  `,
@@ -27,7 +27,7 @@ async function importData() {
       .pipe(JSONStream.parse('*'))
       .pipe(
         es.mapSync(async item => {
-          const record = new Model(item);
+          const record = new AirQualityRecord(item);
           await record.save();
 
           // bar.tick();

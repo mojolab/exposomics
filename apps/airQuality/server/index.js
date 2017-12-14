@@ -1,5 +1,5 @@
 import moment from 'moment';
-import AQICollection from './models/AQI';
+import AirQualityRecord from './models/AirQualityRecord';
 import ExposomicsLocationManager from '../../../utils/ExposomicsLocationManager';
 import ExposomicsData from '../../../utils/ExposomicsData';
 // const AqiExposomics = require('./ExposomicsManager')
@@ -15,7 +15,6 @@ import ExposomicsData from '../../../utils/ExposomicsData';
  * @property {Array} result.dataList
  */
 export default (async function controller(places) {
-  const collection = AQICollection;
   // Create the location manager with the list of places.
   const locationManager = new ExposomicsLocationManager(places);
 
@@ -43,7 +42,7 @@ export default (async function controller(places) {
     try {
       // Make the async call to the database to get the AQI for a particular location and date.
       // If a different database structure is used, this line will have to get modified (but only this line)
-      result = await collection.findOne({
+      result = await AirQualityRecord.findOne({
         state,
         county,
         date: dateString,
