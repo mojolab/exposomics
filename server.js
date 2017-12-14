@@ -1,107 +1,128 @@
-import { Microservice } from '@doc.ai/microservice';
-import path from 'path';
-import { parse } from 'url';
+/* eslint no-console:0 */
+
 import next from 'next';
-import bodyParser from 'body-parser';
-import serveStatic from 'serve-static';
+import Koa from 'koa';
+import Router from 'koa-router';
+import bodyParser from 'koa-bodyparser';
 import { BadRequest } from 'http-errors';
 import { resetIdCounter } from 'react-tabs';
 import moment from 'moment';
 import config from './config';
-import loadApps from './utils/loadApps';
 import MongooseManager from './utils/MongooseManager';
+import apps from './apps/index.server';
 
+const port = parseInt(config.get('port'), 10);
 const dev = process.env.NODE_ENV !== 'production';
-const app = next({ dev });
+const nextApp = next({ dev });
+const handle = nextApp.getRequestHandler();
 
-const service = new Microservice(parseInt(config.get('port'), 10));
-
-app.prepare().then(async () => {
-  const appsEnabled = await loadApps();
+nextApp.prepare().then(async () => {
   await MongooseManager.connect();
 
-  service.app.use(bodyParser.json());
+  const app = new Koa();
+  const router = new Router();
 
-  ['/favicon.ico'].forEach(p => {
-    service.app.get(p, serveStatic(path.resolve(__dirname, 'static')));
+  router.get('/favicon.ico', ctx => {
+    ctx.redirect('/static/favicon.ico');
   });
 
-  service.app.post('/api/places', async (req, res) => {
-    try {
-      const places = req.body.places.map((place, idx) => {
-        const result = {};
+  router.post('/api/places', async ctx => {
+    const { request: { body } } = ctx;
 
-        ['location', 'fromDate', 'toDate'].forEach(key => {
-          if (!place[key]) {
-            throw new BadRequest(`No ${key} is provided for place ${idx}`);
-          }
-        });
+    const places = body.places.map((place, idx) => {
+      const result = {};
 
-        // TODO: convert location to Location class and use the same also on frontend
-        result.location = place.location;
-
-        ['fromDate', 'toDate'].forEach(key => {
-          try {
-            result[key] = moment(new Date(place[key]));
-          } catch (e) {
-            throw new BadRequest(
-              `Wrong ${key} is provided for place ${
-                idx
-              }. Expected ISO-8601 formatted string.`,
-            );
-          }
-        });
-
-        if (result.toDate.isBefore(result.fromDate)) {
-          throw new BadRequest(
-            `Wrong fromDate is provided for place ${
-              idx
-            }. It cannot be before toDate.`,
-          );
+      ['location', 'fromDate', 'toDate'].forEach(key => {
+        if (!place[key]) {
+          throw new BadRequest(`No ${key} is provided for place ${idx}`);
         }
-
-        // TODO: some more checks
-
-        return result;
       });
 
-      if (!places.length) {
+      // TODO: convert location to Location class and use the same also on frontend
+      result.location = place.location;
+
+      ['fromDate', 'toDate'].forEach(key => {
+        try {
+          result[key] = moment(new Date(place[key]));
+        } catch (e) {
+          throw new BadRequest(
+            `Wrong ${key} is provided for place ${
+              idx
+            }. Expected ISO-8601 formatted string.`,
+          );
+        }
+      });
+
+      if (result.toDate.isBefore(result.fromDate)) {
         throw new BadRequest(
-          'Please provide at least one place where you lived',
+          `Wrong fromDate is provided for place ${
+            idx
+          }. It cannot be before toDate.`,
         );
       }
 
-      const resultsArr = await Promise.all(
-        appsEnabled.map(async item =>
-          Object.assign({}, item, {
-            results: await item.controller(places),
-          }),
-        ),
-      );
+      // TODO: some more checks
 
-      const results = {};
-      resultsArr.forEach(item => {
-        results[item.name] = item.results;
-      });
+      return result;
+    });
 
-      res.send(results);
-    } catch (e) {
-      res.status(e.statusCode || 500);
-      res.send({
-        name: e.name,
-        message: e.message,
-      });
+    if (!places.length) {
+      throw new BadRequest('Please provide at least one place where you lived');
+    }
+
+    const resultsArr = await Promise.all(
+      Object.keys(apps).map(async name => ({
+        name,
+        results: await apps[name](places),
+      })),
+    );
+
+    const results = {};
+    resultsArr.forEach(item => {
+      results[item.name] = item.results;
+    });
+
+    ctx.body = results;
+  });
+
+  router.get('*', async ctx => {
+    resetIdCounter();
+    await handle(ctx.req, ctx.res);
+    ctx.respond = false;
+  });
+
+  app.use(async (ctx, nextMiddleware) => {
+    ctx.res.statusCode = 200;
+    await nextMiddleware();
+  });
+
+  app.use(async (ctx, nextMiddleware) => {
+    try {
+      await nextMiddleware();
+    } catch (err) {
+      ctx.status = err.status || 500;
+      ctx.body = {
+        status: ctx.status,
+        name: err.name,
+        message: err.message,
+      };
+      ctx.app.emit('error', err, ctx);
     }
   });
+  app.use(bodyParser());
+  app.use(router.routes());
+  app.use(router.allowedMethods());
 
-  service.app.get('*', (req, res) => {
-    const parsedUrl = parse(req.url, true);
-    const { pathname, query } = parsedUrl;
+  await new Promise((resolve, reject) => {
+    app.listen(port, err => {
+      if (err) {
+        reject(err);
+        return;
+      }
 
-    resetIdCounter();
-
-    return app.render(req, res, pathname, query);
+      resolve();
+    });
   });
 
-  service.start();
+  console.log(`> Ready on http://localhost:${port}`);
 });

@@ -1,8 +1,9 @@
 import moment from 'moment';
 import AQICollection from './models/AQI';
-import ExposomicsLocationManager from './ExposomicsLocationManager';
-import ExposomicsData from './ExposomicsData';
+import ExposomicsLocationManager from '../../../utils/ExposomicsLocationManager';
+import ExposomicsData from '../../../utils/ExposomicsData';
 // const AqiExposomics = require('./ExposomicsManager')
+
 /**
  * This function accepts a list of places (json) and returns data to be rendered by the React component
 
@@ -70,6 +71,7 @@ export default (async function controller(places) {
     endDate,
     interval,
   );
+
   await dataObject.populateDataList(); // This needs to be a seperate call because it's an async function
   // and can't be done in the constructor of ExposomicsData
 

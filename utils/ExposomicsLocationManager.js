@@ -29,7 +29,6 @@ export default class ExposomicsLocationManager extends TimeSeriesLocations {
    *
    * @return {Array.<String>}
    */
-
   getCountyList() {
     const result = [];
 
@@ -38,5 +37,29 @@ export default class ExposomicsLocationManager extends TimeSeriesLocations {
       result.push(county);
     }
     return result;
+  }
+
+  getStartDate() {
+    let min;
+
+    for (const item of this.locationObjects) {
+      if (!min || min.diff(item.startDate) > 0) {
+        min = item.startDate;
+      }
+    }
+
+    return min;
+  }
+
+  getEndDate() {
+    let max;
+
+    for (const item of this.locationObjects) {
+      if (!max || max.diff(item.endDate) < 0) {
+        max = item.endDate;
+      }
+    }
+
+    return max;
   }
 }
