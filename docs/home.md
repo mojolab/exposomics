@@ -26,6 +26,6 @@ The challenge is hosted on doc.ai Exposomic repository. The goal of this challen
 *  ### **Invite your friends to the challenge for extra 200 $NRN referral bonus!
  ** referral bonus, up to 20,000$NRN, applies upon a valid submission
  
- ## [Join the challenge!](https://github.com/doc-ai/exposomics/tree/develop)
+ ## [Join the challenge!](https://github.com/doc-ai/exposomics)
 
 ***
