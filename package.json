@@ -17,6 +17,7 @@
     "build": "next build",
     "start": "NODE_ENV=production node index.js",
     "lint": "eslint .",
+    "docs": "esdoc .",
     "precommit": "lint-staged"
   },
   "lint-staged": {
