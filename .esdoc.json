@@ -20,11 +20,11 @@
           "image": "./docs/asset/logo.png"
         },
         "manual": {
-          "index": "./docs/home.md",
+          "index": "./docs/index.md",
           "globalIndex": true,
           "asset": "./docs/asset",
           "files": [
-            "./docs/home.md",
+            "./docs/index.md",
             "./docs/details.md",
             "./docs/example.md"
           ]
