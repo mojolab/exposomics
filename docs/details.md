@@ -1,7 +1,7 @@
 # Contest Details
 
 ## How to participate
-1. Comlete our [registration form](https://goo.gl/forms/hZX1r5CIHJC76vBA3). 
+1. Complete our [registration form](https://goo.gl/forms/hZX1r5CIHJC76vBA3). 
 2. Create and submit a new issue, following the template we've provided. This includes listing all names, github accounts, and emails of everyone contributing to your project, and a brief (~1-2 paragraph) description of your proposed work.
 3. Fork the [repository](https://github.com/doc-ai/exposomics) and create your branch from `master`.
 4. Complete [local installation instructions](https://github.com/doc-ai/exposomics/blob/master/README.md#local-installation).
