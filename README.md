@@ -17,11 +17,13 @@ The challenge is hosted on doc.ai Exposomic repository. The goal of this challen
 ![Landing page](https://doc-ai.github.io/exposomics/manual/asset/expo.gif)
 
 #### Local Installation
-- Install Homebrew: `brew install`
+- Install Homebrew: `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 - Install Node.js via homebrew : `brew install node`
 - Install dependencies via yarn: `yarn install`
 - Install MongoDB: [Use this guide](https://docs.mongodb.com/getting-started/shell/installation/) to set up MongoDB on your machine and run a local database server.
 - Install Git Large File Storage via homebrew: `brew install git-lfs`
+- Clone this repository to your working folder: `git clone + https://github.com/doc-ai/exposomics.git`
+- Open project folder: `cd exposomics`
 - Download the raw data and prepare for import: `python apps/airQuality/server/data/prepare_data.py`
 - Import data into your local database service: `node apps/airQuality/server/data/import_data.js`
 <!-- - If you will add your own data source (instead of using our Air Quality data), we have example scripts used for our database at `apps/airQuality/server/data/prepare_data.py` -->
