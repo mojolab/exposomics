@@ -16,6 +16,10 @@ The challenge is hosted on doc.ai Exposomic repository. The goal of this challen
 
 ![Landing page](https://doc-ai.github.io/exposomics/manual/asset/expo.gif)
 
+#### Clone repository
+- Clone this repository to your working folder: `git clone https://github.com/doc-ai/exposomics.git`
+- Open project folder: `cd exposomics`
+
 #### Install required software
 
 #### MAC OS
@@ -23,17 +27,13 @@ The challenge is hosted on doc.ai Exposomic repository. The goal of this challen
 - Install Node.js via homebrew : `brew install node`
 - Install dependencies via yarn: `yarn install`
 - Install MongoDB: [Use this guide](https://docs.mongodb.com/getting-started/shell/installation/) to set up MongoDB on your machine and run a local database server.
-- Install Git Large File Storage via homebrew: `brew install git-lfs` or [Use this guide](https://help.github.com/articles/installing-git-large-file-storage/) to set up Git Large File Storage
 
 #### Linux
 - Install Node.js: [Use this guide](https://nodejs.org/en/download/package-manager/) to install Node.js for your Linux distribution
 - Install dependencies via npm: `npm install`
 - Install MongoDB: [Use this guide](https://docs.mongodb.com/getting-started/shell/installation/) to set up MongoDB on your machine and run a local database server.
-- Install Git Large File Storage: [Use this guide](https://help.github.com/articles/installing-git-large-file-storage/) to set up Git Large File Storage
 
 #### Local Installation
-- Clone this repository to your working folder: `git clone + https://github.com/doc-ai/exposomics.git`
-- Open project folder: `cd exposomics`
 - Download the raw data and prepare for import: `python apps/airQuality/server/data/prepare_data.py`
 - Import data into your local database service: `node apps/airQuality/server/data/import_data.js`
 <!-- - If you will add your own data source (instead of using our Air Quality data), we have example scripts used for our database at `apps/airQuality/server/data/prepare_data.py` -->
