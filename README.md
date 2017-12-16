@@ -26,8 +26,7 @@ The challenge is hosted on doc.ai Exposomic repository. The goal of this challen
 - Install Git Large File Storage via homebrew: `brew install git-lfs` or [Use this guide](https://help.github.com/articles/installing-git-large-file-storage/) to set up Git Large File Storage
 
 #### Linux
-- Install Homebrew: `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
-- Install Node.js: `https://nodejs.org/en/download/package-manager/`
+- Install Node.js: [Use this guide](https://nodejs.org/en/download/package-manager/) to install Node.js for your Linux distribution
 - Install dependencies via npm: `npm install`
 - Install MongoDB: [Use this guide](https://docs.mongodb.com/getting-started/shell/installation/) to set up MongoDB on your machine and run a local database server.
 - Install Git Large File Storage: [Use this guide](https://help.github.com/articles/installing-git-large-file-storage/) to set up Git Large File Storage
