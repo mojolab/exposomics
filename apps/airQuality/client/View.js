@@ -139,7 +139,13 @@ export default class View extends React.PureComponent {
               <div className="row">
                 <div className="col-xs-6">
                   <li>
-                    <a href="/">EPA&apos;s Air Quality Brochure</a>
+                    <a 
+                      href="https://www3.epa.gov/airnow/aqi_brochure_02_14.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      EPA&apos;s Air Quality Brochure
+                    </a>
                     <br />
                     <span>
                       A comprehensive guide to everything AQI (20 min read)
@@ -149,7 +155,12 @@ export default class View extends React.PureComponent {
 
                 <div className="col-xs-6">
                   <li>
-                    <a href="/">How AQI is Calculated</a>
+                    <a href="https://forum.airnowtech.org/t/the-aqi-equation/169"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >
+                      How AQI is Calculated
+                    </a>
                     <br />
                     <span>5 min read</span>
                   </li>
