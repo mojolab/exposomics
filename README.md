@@ -10,6 +10,7 @@ This is a huge endeavor with a massive opportunity to **understand factors that 
 We’re inviting the community to design a microapp and write extensions to the [doc.ai](https://doc.ai/) exposomic module. Along with great prizes in $NRN (Neuron Tokens) the best extensions will be integrated into the [doc.ai](https://doc.ai/) solution that performs deep learning computations to improve health outcomes and accelerate scientific research.
 
 **Make your mark, it's happening now**
+## [REGISTER HERE!](https://goo.gl/forms/nz7YyYDi4mnir2At2)
 
 [doc.ai](https://doc.ai/) is a blockchain conversational AI platform that performs deep learning computations on quantified biology to develop predictive analytics and personal health insights.
 
@@ -17,7 +18,7 @@ We’re inviting the community to design a microapp and write extensions to the 
 # **THE EXPOSOMICS CHALLENGE**
 [Contest details linked here](https://doc-ai.github.io/exposomics/manual/details.html)
 
-## [REGISTER NOW!](https://goo.gl/forms/nz7YyYDi4mnir2At2)
+## [REGISTER HERE!](https://goo.gl/forms/nz7YyYDi4mnir2At2)
 
 ### [CHECKOUT OUR LIVE DEMO](https://exposomics.doc.ai)
 
@@ -68,3 +69,5 @@ The challenge is hosted on [doc.ai](https://doc.ai/) Exposomic repository. The g
 - @lizalopez - Liza Lopez | doc.ai
 - @MariiaTkachenko - Mariia Tkachenko | doc.ai
 - @xanf- Illya Klymov | doc.ai
+
+## [REGISTER HERE!](https://goo.gl/forms/nz7YyYDi4mnir2At2)
