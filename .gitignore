@@ -61,5 +61,4 @@ typings/
 .next
 
 www/
-
-apps/airQuality/server/data/raw/*
+db/

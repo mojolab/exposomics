@@ -23,7 +23,7 @@
   "lint-staged": {
     "*.js": [
       "prettier --write --single-quote --trailing-comma all",
-      "eslint .",
+      "eslint . --fix",
       "git add"
     ]
   },
@@ -34,6 +34,7 @@
     "babel-preset-stage-0": "^6.24.1",
     "chart.js": "^2.7.1",
     "classnames": "^2.2.5",
+    "csv": "^2.0.0",
     "event-stream": "^3.3.4",
     "flexboxgrid-sass": "^8.0.5",
     "fs-extra": "^5.0.0",
@@ -64,7 +65,8 @@
     "react-tabs": "^2.1.0",
     "redux": "^3.7.2",
     "redux-logger": "^3.0.6",
-    "redux-thunk": "^2.2.0"
+    "redux-thunk": "^2.2.0",
+    "unzip-stream": "^0.2.1"
   },
   "devDependencies": {
     "babel-eslint": "^8.0.1",
