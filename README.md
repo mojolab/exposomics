@@ -25,6 +25,8 @@ The challenge is hosted on [doc.ai](https://doc.ai/) Exposomic repository. The g
 
 ![Landing page](https://doc-ai.github.io/exposomics/manual/asset/expo.gif)
 
+![Potential topics](https://doc-ai.github.io/exposomics/manual/asset/potentialTopics.png)
+
 ## How to participate
 1. Complete our [registration form](https://goo.gl/forms/hZX1r5CIHJC76vBA3). 
 2. Create and submit a new issue, following the template we've provided. This includes listing all names, github accounts, and emails of everyone contributing to your project, and a brief (~1-2 paragraph) description of your proposed work.
