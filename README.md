@@ -53,7 +53,7 @@ The challenge is hosted on [doc.ai](https://doc.ai/) Exposomic repository. The g
 - Install MongoDB: [Use this guide](https://docs.mongodb.com/getting-started/shell/installation/) to set up MongoDB on your machine and run a local database server.
 
 #### Local Installation
-- Run `node createDbFiles.js` to download all required data and put it to local db files.
+- Run `node -r babel-register createDbFiles.js` to download all required data and put it to local db files.
 - Run `mongoimport --drop --stopOnError --headerline --type csv db/*` to import local db files to MongoDB.
 <!-- - If you will add your own data source (instead of using our Air Quality data), we have example scripts used for our database at `apps/airQuality/server/data/prepare_data.py` -->
 
