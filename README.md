@@ -21,6 +21,14 @@ The challenge is hosted on doc.ai Exposomic repository. The goal of this challen
 
 ![Landing page](https://doc-ai.github.io/exposomics/manual/asset/expo.gif)
 
+## How to participate
+1. Complete our [registration form](https://goo.gl/forms/hZX1r5CIHJC76vBA3). 
+2. Create and submit a new issue, following the template we've provided. This includes listing all names, github accounts, and emails of everyone contributing to your project, and a brief (~1-2 paragraph) description of your proposed work.
+3. Fork the [repository](https://github.com/doc-ai/exposomics) and create your branch from `master`.
+4. Complete [local installation instructions](https://github.com/doc-ai/exposomics/blob/master/README.md#local-installation).
+5. Submit a pull request with a reference to your issue number (#IssueNumber), so your PR links directly to your issue submission.
+6. Upon a successful testing and code review, we will merge your branch into `master` and evaulate your entry for contest awards.
+
 #### Clone repository
 - Clone this repository to your working folder: `git clone https://github.com/doc-ai/exposomics.git`
 - Open project folder: `cd exposomics`
