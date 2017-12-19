@@ -1,13 +1,13 @@
-# **“JOIN THE EXPOSOMICS CHALLNGE”**
+# **“JOIN THE EXPOSOMICS CHALLENGE”**
 
 [![Build Status](https://travis-ci.org/doc-ai/exposomics.svg?branch=master)](https://travis-ci.org/doc-ai/exposomics)
 [![Greenkeeper badge](https://badges.greenkeeper.io/doc-ai/exposomics.svg)](https://greenkeeper.io/)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
 We want to make it easier for everyone to generate their **-exposome-** their entire life's exposure from **air quality, water contamination and other environmental pressures** in minutes.
-This is a huge endeavor with a massive opportunity to **understand factors that contribute to diseases and deteriorate our health. _Today we are asking developers and scientists to build the pieces and debug the code._** 
+This is a huge endeavor with a massive opportunity to **understand factors that contribute to diseases and deteriorate our health. _Today we are asking developers and scientists to help build the pieces and debug the code._**
 
-We’re inviting the community to design a microapp and write extensions to the [doc.ai](https://doc.ai/) exposomic module. Along with great prizes in $NRN (Neuron Tokens) the best extensions will be integrated into the [doc.ai](https://doc.ai/) solution that performs deep learning computations to improve health outcomes and accelerate scientific research.
+We’re inviting the community to design microapps and write extensions to the [doc.ai](https://doc.ai/) exposomic module. Along with great prizes in $NRN (Neuron Tokens) the best extensions will be integrated into the [doc.ai](https://doc.ai/) solution that performs deep learning computations to improve health outcomes and accelerate scientific research.
 
 **Make your mark, it's happening now**
 ## [REGISTER HERE!](https://goo.gl/forms/nz7YyYDi4mnir2At2)
