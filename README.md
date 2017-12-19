@@ -5,7 +5,7 @@
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
 We want to make it easier for everyone to generate their **-exposome-** their entire life's exposure from **air quality, water contamination and other environmental pressures** in minutes.
-This is a huge endeavor with a massive opportunity to **understand factors that contribute to diseases and deteriorate our health. _Today we are asking developers and scientists to build the pieces and debug the code._** 
+This is a huge endeavor with a massive opportunity to **understand factors that contribute to diseases and deteriorate our health. _Today we are asking developers and scientists to build the pieces and debug the code._**
 
 We’re inviting the community to design a microapp and write extensions to the [doc.ai](https://doc.ai/) exposomic module. Along with great prizes in $NRN (Neuron Tokens) the best extensions will be integrated into the [doc.ai](https://doc.ai/) solution that performs deep learning computations to improve health outcomes and accelerate scientific research.
 
@@ -28,7 +28,7 @@ The challenge is hosted on [doc.ai](https://doc.ai/) Exposomic repository. The g
 ![Potential topics](https://doc-ai.github.io/exposomics/manual/asset/potentialTopics.png)
 
 ## How to participate
-1. Complete our [registration form](https://goo.gl/forms/hZX1r5CIHJC76vBA3). 
+1. Complete our [registration form](https://goo.gl/forms/hZX1r5CIHJC76vBA3).
 2. Create and submit a new issue, following the template we've provided. This includes listing all names, github accounts, and emails of everyone contributing to your project, and a brief (~1-2 paragraph) description of your proposed work.
 3. Fork the [repository](https://github.com/doc-ai/exposomics) and create your branch from `master`.
 4. Complete [local installation instructions](https://github.com/doc-ai/exposomics/blob/master/README.md#local-installation).
@@ -53,8 +53,8 @@ The challenge is hosted on [doc.ai](https://doc.ai/) Exposomic repository. The g
 - Install MongoDB: [Use this guide](https://docs.mongodb.com/getting-started/shell/installation/) to set up MongoDB on your machine and run a local database server.
 
 #### Local Installation
-- Download the raw data and prepare for import: `python apps/airQuality/server/data/prepare_data.py`
-- Import data into your local database service: `node apps/airQuality/server/data/import_data.js`
+- Run `node createDbFiles.js` to download all required data and put it to local db files.
+- Run `mongoimport --drop --stopOnError --headerline --type csv db/*` to import local db files to MongoDB.
 <!-- - If you will add your own data source (instead of using our Air Quality data), we have example scripts used for our database at `apps/airQuality/server/data/prepare_data.py` -->
 
 **Modifications**
