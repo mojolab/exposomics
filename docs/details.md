@@ -13,6 +13,7 @@
 * Gathering and cleaning other sources of location-based data
 * Gathering and cleaning exposomic data outside of the U.S.
 * Creating visualizations for other exposomes (e.g. water pollutants, other air pollutants) both inside and outside of US
+![Potential topics](https://doc-ai.github.io/exposomics/manual/asset/potentialTopics.png)
 
 ## Challenge Entry Specifications
 * A valid entry consists of a (final) pull request that produces a significant, fully functioning update to our webapp.
