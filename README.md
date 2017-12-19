@@ -65,9 +65,10 @@ The challenge is hosted on [doc.ai](https://doc.ai/) Exposomic repository. The g
 - @alexdocai - 	Alex Kwiatkowski | doc.ai
 - @apurvmishra - Apurv Mishra | doc.ai
 - @BohdanTkachenko - Bohdan Tkachenko | doc.ai
+- @xanf- Illya Klymov | doc.ai
 - @irod973 - Irving Rodriguez | doc.ai
 - @lizalopez - Liza Lopez | doc.ai
 - @MariiaTkachenko - Mariia Tkachenko | doc.ai
-- @xanf- Illya Klymov | doc.ai
+- @majortom57 - Walter De Brouwer | doc.ai
 
 ## [REGISTER HERE!](https://goo.gl/forms/nz7YyYDi4mnir2At2)
